@@ -41,8 +41,8 @@ map_settings:
     other: 0.9
 
   figure:
-    width_in: 24
-    height_in: 36
+    width_in: 21
+    height_in: 12
     dpi: 300
     margin_frac: 0.02
 

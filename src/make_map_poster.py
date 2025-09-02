@@ -14,19 +14,16 @@ The YAML file must contain:
 import os
 import sys
 import argparse
-from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import matplotlib as mpl
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.image as mpimg
 import numpy as np
-import math
 import osmnx as ox
 from shapely.ops import unary_union
 from typing import Optional, Tuple, Dict, Any
 from models import MapPosterConfig, _center_from_bbox, clip_layers_to_bbox
-import yaml
 import geopandas as gpd
 from osmnx._errors import InsufficientResponseError
 
