@@ -52,8 +52,10 @@ map_settings:
     no_axes: true
     show: false
     title: "Amsterdam"
-    # coords: "50.900°N, 5.963°E"
+    # coords: "50.900°N, 5.963°E" # When not set, coords_auto could be calculated automatically in dms or dd format
     coords_auto: dms
     font: null         # e.g. "Inter"
+    font_size_title: 60
+    font_size_subtitle: 24
     icon: "./src/icons/home.png"
     seed: 42

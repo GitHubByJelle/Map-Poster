@@ -180,15 +180,15 @@ def add_bottom_gradient(ax, background_color: str, height_frac=0.1):
     overlay.set_facecolor("none")
     overlay.set_axis_off()
 
-def draw_text_footer(ax, title: Optional[str], coords: Optional[str]):
+def draw_text_footer(ax, title: Optional[str], coords: Optional[str], font_size_title: Optional[int]=112, font_size_subtitle: Optional[int]=42):
     if not title and not coords:
         return
     y = 0.075
     if title:
-        ax.text(0.5, y, title, transform=ax.transAxes, ha="center", va="bottom", fontsize=112, color="#111111", zorder=2_000)
+        ax.text(0.5, y, title, transform=ax.transAxes, ha="center", va="bottom", fontsize=font_size_title, color="#111111", zorder=2_000)
         y -= 0.035
     if coords:
-        ax.text(0.5, y, coords, transform=ax.transAxes, ha="center", va="bottom", fontsize=42, color="#555555", zorder=2_000)
+        ax.text(0.5, y, coords, transform=ax.transAxes, ha="center", va="bottom", fontsize=font_size_subtitle, color="#555555", zorder=2_000)
 
 def make_poster(
     ms: Dict[str, Any],
@@ -305,7 +305,7 @@ def make_poster(
         if auto in {"dd", "dms"} and center_lat is not None and center_lon is not None:
             coords_text = _format_coords(center_lat, center_lon, auto)
 
-    draw_text_footer(ax, ms["title"], coords_text)
+    draw_text_footer(ax, ms["title"], coords_text, ms["font_size_title"], ms["font_size_subtitle"])
 
     # Save
     out_path = ms["out_path"]

@@ -204,6 +204,8 @@ class OutputOpts(BaseModel):
     coords: Optional[str] = Field(default=None, description="Explicit coordinates footer text.")
     coords_auto: CoordsAuto = Field(default="none", description='Auto coord format: "none"|"dd"|"dms".')
     font: Optional[str] = Field(default=None, description="Matplotlib font family.")
+    font_size_title: Optional[int] = Field(default=112, description="Font size of the title")
+    font_size_subtitle: Optional[int] = Field(default=42, description="Font size of the subtitle")
     icon: Optional[str] = Field(default=None, description="Path to icon positioned in center")
     seed: int = Field(default=42, description="Seed for any randomized operations/caches.")
 
@@ -236,6 +238,8 @@ class MapSettings(BaseModel):
             "coords": out.coords,
             "coords_auto": out.coords_auto,
             "font": out.font,
+            "font_size_title": out.font_size_title,
+            "font_size_subtitle": out.font_size_subtitle,
             "icon": out.icon,
             "seed": out.seed,
         }
