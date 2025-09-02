@@ -25,4 +25,4 @@ Next, configure the settings file according to your needs. You can configure wha
 Once configured, generate a map with:
 ```bash
 uv run src/make_map_poster.py ./src/config/config.example.yml
-``
+```
