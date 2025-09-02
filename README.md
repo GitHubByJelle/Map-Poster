@@ -1,4 +1,4 @@
-# Creating a Map Poster
+# Plot My Map
 This project is a personal experiment inspired by the poster-style map artworks often advertised on social media. After seeing these ads repeatedly, I set myself the challenge to create a similar system from scratch, not just replicating the idea, but also making it configurable and extensible.
 
 The project leverages OpenStreetMap (OSM) data to extract information about a predefined region of interest. Using this data, I implemented a pipeline that visualizes the map with customizable features such as color schemes, plotted elements, and layer inclusion/exclusion. The maps are rendered using Matplotlib, with a focus on achieving high enough resolution and quality for use in poster-sized prints.
