@@ -1,0 +1,17 @@
+[project]
+name = "map-poster"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.2",
+    "osmnx>=2.0.6",
+    "pillow>=11.3.0",
+    "pydantic>=2.11.7",
+    "pyyaml>=6.0.2",
+    "reportlab>=4.4.3",
+    "shapely>=2.1.1",
+    "svglib>=1.5.1",
+]
